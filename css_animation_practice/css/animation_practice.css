@@ -1,0 +1,121 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.grid_container {
+    width: 400px;
+    height: 100px;
+    position: relative;
+    left: 40%;
+    top: 30%; /* for optical centering */
+    margin-top: -50px;
+    margin-left: -100px;
+}
+
+.mono {
+    font-family: 'didot';
+    font-size: 6em;
+    float: left;
+    margin-left: 5px;
+}
+
+@keyframes y_move {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+    100% {
+        top: 0px;
+        left: 160px;
+    }
+}
+
+@keyframes o_move {
+    0% {
+        top: 0px;
+        color: black;
+    }
+    100% {
+        too: 300px;
+        color: tomato;
+    }
+}
+
+@keyframes g_move {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes a_move {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+    50% {
+        top: -150px;
+        left: 0px;
+    }
+    100% {
+        top: -150px;
+        left: 600px;
+    }
+}
+
+@keyframes j_move {
+    0% {
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+    }
+    25% {
+        top: 150px;
+        left: 0px;
+        opacity: 1;
+    }
+    75% {
+        top: 150px;
+        left: -300px;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: -300px;
+        opacity: 1;
+    }
+}
+
+.y {
+ position: relative;
+    animation: y_move 1s forwards cubic-bezier(1, 0, 0, 1);
+    animation-delay: 3s;
+
+}
+
+.o {
+    position: relative;
+    animation: o_move 1s alternate infinite cubic-bezier(1, 0, 0, 1);
+}
+
+.g {
+    opacity: 1;
+    animation: g_move 1s forwards;
+    animation-delay: 2s;
+}
+
+.a {
+    position: relative;
+    animation: a_move 1s forwards;
+    animation-delay: 1s;
+}
+
+.j {
+    opacity: 0;
+    position: relative;
+    animation: j_move 1s forwards ;
+    animation-delay: 4s;
+}
